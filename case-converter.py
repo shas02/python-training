@@ -1,5 +1,8 @@
-def convert_to_snake_case(pascal_or_camel_cased_string):
-    snake_cased_char_list = [
+from typing import List
+
+
+def convert_to_snake_case(pascal_or_camel_cased_string: str) -> str:
+    snake_cased_char_list: List[str] = [
         '_' + char.lower() if char.isupper()
         else char
         for char in pascal_or_camel_cased_string
