@@ -31,16 +31,9 @@ def arithmetic_arranger(problems: List[str], show_answers: bool = False):
             result: int = calculateResult(number1, number2, operator)
             results += formResultPart(result, partLen)
 
-    topParts += '\n'
-    bottomParts += '\n'
-
-    butyfiedProblems: str = ''
-    butyfiedProblems += topParts
-    butyfiedProblems += bottomParts
-    butyfiedProblems += dashesParts
+    butyfiedProblems: str = topParts + '\n' + bottomParts + '\n' + dashesParts
     if show_answers:
-        dashesParts += '\n'
-        butyfiedProblems += results
+        butyfiedProblems += '\n' + results
 
     return butyfiedProblems
 
